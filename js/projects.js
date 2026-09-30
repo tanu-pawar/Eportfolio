@@ -79,7 +79,7 @@ const fieldSites = [
    loc:"Pashan Lake, Pune, Maharashtra", purpose:"Observe wetland ecosystems and understand urban biodiversity.",
    did:"Collected data on water-quality parameters (pH and turbidity), vegetation cover and avifaunal species. GPS Essentials was used to mark sampling points, and photographs documented vegetation and litter distribution.",
    gis:"Linked physical field observations with ecological observations and considered how GIS can represent field findings spatially.",
-   obs:"Water-quality parameters, vegetation cover, avifaunal observations, GPS-marked sampling points and photographs.", skills:["GPS-based location marking","Quadrat sampling","Bird identification","Photo documentation"], learn:"Urban wetlands can act as biodiversity hotspots despite anthropogenic pressures."},
+   obs:"Water-quality parameters, vegetation cover, avifaunal observations, GPS-marked sampling points and photographs.", skills:["GPS-based location marking","Quadrat sampling","Bird identification","Photo documentation"], learn:"Urban wetlands can act as biodiversity hotspots despite anthropogenic pressures.", photo: "Pashan.jpg", photoAlt:"Field group at Pashan Lake, Pune, Maharashtra"},
   {id:"supe", name:"Supe Village · Mayureshwar Sanctuary", short:"Soil & land-use survey", date:"6 September 2025", lat:18.4787, lng:74.4516,
    loc:"Supe Village, Maharashtra", purpose:"Study rural land use and soil properties in the Supe landscape.",
    did:"Collected soil samples from agricultural plots, observed land-use patterns through visual interpretation and interacted with local farmers for ground-truthing.",

@@ -107,15 +107,18 @@ h4{margin:14px 0 6px;font-size:.85rem;text-transform:uppercase;letter-spacing:.1
 
 
 
-/* ======================================
-   COURSE REFLECTIONS SECTION
-   ====================================== */
+
+/* =========================================
+   COURSE REFLECTIONS
+   Selectors matched to index.html
+   ========================================= */
 
 .course-reflections {
   width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  padding: clamp(28px, 5vw, 72px) clamp(18px, 5vw, 76px);
+  padding: 110px 0 90px;
+  background: var(--bg);
+  color: var(--fg);
+  overflow: hidden;
   overflow-wrap: anywhere;
 }
 
@@ -125,127 +128,289 @@ h4{margin:14px 0 6px;font-size:.85rem;text-transform:uppercase;letter-spacing:.1
   box-sizing: border-box;
 }
 
+.course-reflections .container {
+  width: min(1120px, 92%);
+  margin: 0 auto;
+  min-width: 0;
+}
+
+.course-reflections .eyebrow {
+  color: var(--olive);
+  margin-bottom: 12px;
+}
+
+.course-reflections h2 {
+  margin-bottom: 22px;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  line-height: 1.1;
+}
+
+.course-reflections h2 em {
+  color: var(--forest);
+}
+
 .course-reflections .reflection-intro {
   max-width: 760px;
-  margin: 0 0 30px;
-  line-height: 1.8;
-  color: var(--muted, #c4c9c1);
+  margin: 0 0 32px;
+  font-size: 1.05rem;
+  line-height: 1.85;
+  opacity: 0.85;
 }
 
-.course-reflections .reflection-roadmap {
+/* Three semester overview panels */
+
+.course-reflections .reflection-stats {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-  margin: 28px 0 44px;
+  gap: 16px;
+  margin: 32px 0 42px;
 }
 
-.course-reflections .reflection-roadmap a {
-  display: block;
-  padding: 17px 19px;
-  color: inherit;
-  text-decoration: none;
-  background: rgba(255, 255, 255, 0.035);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 14px;
-  transition: transform 0.2s ease, border-color 0.2s ease;
-}
-
-.course-reflections .reflection-roadmap a:hover {
-  transform: translateY(-3px);
-  border-color: #a9c2a0;
-}
-
-.course-reflections .reflection-semester {
+.course-reflections .reflection-stat {
   min-width: 0;
-  margin: 0 0 30px;
-  padding: clamp(20px, 3vw, 34px);
-  background: rgba(255, 255, 255, 0.025);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--card);
+  transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
-.course-reflections .reflection-semester h3 {
-  margin: 8px 0 12px;
-  font-size: clamp(1.4rem, 2.5vw, 2rem);
-  line-height: 1.3;
+.course-reflections .reflection-stat:hover {
+  transform: translateY(-4px);
+  border-color: var(--sage);
 }
 
-.course-reflections .reflection-semester p {
-  max-width: 850px;
-  line-height: 1.8;
-  color: var(--muted, #c4c9c1);
-}
-
-.course-reflections .reflection-label {
-  font-size: 0.76rem;
-  letter-spacing: 0.14em;
+.course-reflections .reflection-number {
+  flex-shrink: 0;
+  color: var(--accent);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.8rem;
   font-weight: 700;
-  color: #b8cdae;
 }
 
-.course-reflections .reflection-icon {
-  margin: 14px 0;
-  font-size: 1.6rem;
+.course-reflections .reflection-stat span:last-child {
+  line-height: 1.4;
+  font-size: 0.92rem;
 }
 
-.course-reflections details {
-  margin-top: 22px;
-  border-top: 1px solid rgba(255, 255, 255, 0.14);
-  padding-top: 17px;
+/* Semester cards */
+
+.course-reflections .reflection-card {
+  min-width: 0;
+  margin: 0 0 26px;
+  padding: clamp(22px, 4vw, 38px);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--card);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.045);
+  transition: border-color 0.25s ease,
+              transform 0.25s ease;
 }
 
-.course-reflections details summary {
-  cursor: pointer;
-  font-weight: 600;
-  line-height: 1.6;
-  color: #d1e0c7;
+.course-reflections .reflection-card:hover {
+  border-color: var(--sage);
 }
 
-.course-reflections details summary:hover {
-  color: #ffffff;
+.course-reflections .reflection-card-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 18px;
 }
 
-.course-reflections details ul {
-  padding-left: 22px;
+.course-reflections .reflection-tag {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--accent);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.course-reflections .reflection-card h3 {
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  line-height: 1.3;
+  margin: 0;
+}
+
+.course-reflections .reflection-symbol {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  background: var(--beige);
+  font-size: 1.7rem;
+}
+
+.course-reflections .reflection-card > p {
+  max-width: 850px;
+  margin: 0 0 22px;
+  line-height: 1.85;
+  opacity: 0.85;
+}
+
+/* Expandable subject lists */
+
+.course-reflections .reflection-details {
+  border-top: 1px solid var(--line);
+  padding-top: 18px;
   margin-top: 18px;
 }
 
-.course-reflections details li {
-  padding: 0 0 16px 4px;
-  line-height: 1.75;
-  color: var(--muted, #c4c9c1);
+.course-reflections .reflection-details summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--forest);
 }
 
-.course-reflections .reflection-full-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  max-width: 100%;
-  margin-top: 16px;
-  padding: 13px 19px;
-  border-radius: 999px;
-  background: #b8cdae;
-  color: #172018;
-  text-decoration: none;
-  font-weight: 700;
+.course-reflections .reflection-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.course-reflections .reflection-details summary::before {
+  content: "+";
+  display: inline-grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  font-size: 1.1rem;
   transition: transform 0.2s ease;
 }
 
-.course-reflections .reflection-full-link:hover {
+.course-reflections .reflection-details[open] summary::before {
+  content: "−";
+  background: var(--forest);
+  color: #fff;
+}
+
+.course-reflections .reflection-details ul {
+  margin: 20px 0 0;
+  padding-left: 24px;
+}
+
+.course-reflections .reflection-details li {
+  padding: 0 0 15px 4px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.course-reflections .reflection-details li::marker {
+  color: var(--accent);
+}
+
+.course-reflections .reflection-details strong {
+  color: var(--forest);
+}
+
+/* Link to the complete Google Sites reflections */
+
+.course-reflections .reflection-footer {
+  margin-top: 44px;
+  padding: clamp(24px, 4vw, 38px);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--beige);
+  text-align: center;
+}
+
+.course-reflections .reflection-footer p {
+  max-width: 650px;
+  margin: 0 auto 18px;
+  line-height: 1.8;
+}
+
+.course-reflections .reflection-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  max-width: 100%;
+  padding: 13px 22px;
+  border: 2px solid var(--forest);
+  border-radius: 40px;
+  background: var(--forest);
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.5;
+  transition: transform 0.2s ease,
+              background 0.2s ease;
+}
+
+.course-reflections .reflection-button:hover {
+  background: var(--accent);
+  border-color: var(--accent);
   transform: translateY(-2px);
 }
 
+/* Dark theme refinements */
+
+@media (prefers-color-scheme: dark) {
+  .course-reflections .reflection-stat,
+  .course-reflections .reflection-card {
+    background: var(--card);
+  }
+
+  .course-reflections .reflection-details summary,
+  .course-reflections .reflection-details strong {
+    color: var(--sage);
+  }
+
+  .course-reflections .reflection-button {
+    color: #fff;
+  }
+}
+
+/* Responsive layout */
+
 @media (max-width: 760px) {
-  .course-reflections .reflection-roadmap {
-    grid-template-columns: 1fr;
-  }
-
   .course-reflections {
-    padding: 30px 18px;
+    padding: 95px 0 60px;
   }
 
-  .course-reflections .reflection-semester {
-    padding: 21px 17px;
+  .course-reflections .reflection-stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin: 26px 0 32px;
+  }
+
+  .course-reflections .reflection-stat {
+    padding: 16px;
+  }
+
+  .course-reflections .reflection-card {
+    padding: 22px 18px;
+    border-radius: 17px;
+  }
+
+  .course-reflections .reflection-card-heading {
+    gap: 12px;
+  }
+
+  .course-reflections .reflection-symbol {
+    width: 42px;
+    height: 42px;
+    font-size: 1.35rem;
+    border-radius: 12px;
+  }
+
+  .course-reflections .reflection-footer {
+    padding: 24px 18px;
   }
 }
 
@@ -253,8 +418,8 @@ h4{margin:14px 0 6px;font-size:.85rem;text-transform:uppercase;letter-spacing:.1
   .course-reflections *,
   .course-reflections *::before,
   .course-reflections *::after {
-    transition: none !important;
     animation: none !important;
+    transition: none !important;
   }
 }
 
